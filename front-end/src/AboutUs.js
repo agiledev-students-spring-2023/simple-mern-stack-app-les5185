@@ -17,11 +17,13 @@ const AboutUs = props => {
       <p style={{ width: '50%', display: 'inline-block', marginTop: '16px' }}>
         <h3>
           Hi! My name is Tiffany. I am a senior studying computer science.{' '}
+          <br />
           <br /> I am from Korea. I am interested in entrepreneurship and
           software development. As an aspiring entrepreneur, I wish to help
           people form healthy values in their lives and stay positive and
-          motivated. <br /> On my free time, I like to cook, go on a run, and
-          binge-watch Netflix shows.
+          motivated. <br />
+          <br /> On my free time, I like to cook, go on a run, and binge-watch
+          Netflix shows. Recently, I've been spending days watching Cyperpunk.
         </h3>
       </p>
     </div>
