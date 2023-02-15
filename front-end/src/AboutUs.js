@@ -7,7 +7,7 @@ const AboutUs = props => {
     <div className="about">
       <h1>About Us</h1>
       <h2>Hi! My name is Tiffany.</h2>
-      <img src={image} />
+      <img src={image} width="20%" />
       <p>
         I am a senior studying computer science. I am from Korea. I am
         interested in entrepreneurship and software development. On my free

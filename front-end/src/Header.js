@@ -1,6 +1,7 @@
 import './Header.css'
 import logo from './logo.svg'
 import { Link } from 'react-router-dom'
+import AboutUs from './AboutUs'
 
 /**
  * A React component that is used for the header displayed at the top of every page of the site.
@@ -20,6 +21,9 @@ const Header = props => {
           </li>
           <li className="nav-item">
             <Link to="/messages">Messages</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/aboutUs">About</Link>
           </li>
         </ul>
       </nav>
