@@ -78,5 +78,16 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.get('/aboutUs', async (req, res) => {
+  try {
+    res.json({
+      text: "Hi! My name is Tiffany. I am a senior studying computer science. I am from Korea. I am interested in entrepreneurship and software development. As an aspiring entrepreneur, I wish to help people form healthy values in their lives and stay positive and motivated. On my free time, I like to cook, go on a run, and binge-watch Netflix shows. Recently, I've been spending days watching Cyperpunk.",
+      img: 'https://media.licdn.com/dms/image/D4E03AQFlZrDT-W3OAQ/profile-displayphoto-shrink_400_400/0/1665167249692?e=1681948800&v=beta&t=r2l0CDEgJy2mSIhsRe6xZnGFy7y-9eKZp70cvrC8M30',
+    })
+  } catch (err) {
+    console.error(err)
+  }
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!

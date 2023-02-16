@@ -9,13 +9,13 @@ This is a so-called "monorepo" - a single repository containing all the componen
 To complete this exercise:
 
 1. run this app locally on your own machine (instructions for launching the app below)
-1. add a new page to the app called "About Us", where you have written a few paragraphs about yourself and included a photo of yourself (this does not require any modifications to the back-end code or database).
-1. share a public link to your local instance of the app below (see `ngrok` instructions below for generating a public link)
+2. add a new page to the app called "About Us", where you have written a few paragraphs about yourself and included a photo of yourself. The page content, including all text and the URL to the image must be retrieved as JSON data from a new route you create on the back-end.
+3. share a public link to your local instance of the app below (see `ngrok` instructions below for generating a public link)
 
 When you have completed the exercise, leave your local copy of the app running, enter the public link to it here, and push your code changes to GitHub:
 
-```
-https://224b-207-38-141-123.ngrok.io/aboutUs
+````
+https://90a5-207-38-141-123.ngrok.io/aboutUs
 ```
 
 ## How to launch the app
@@ -112,3 +112,4 @@ Initial set up of MongoDB database:
 - access the mongo shell with `docker exec -it mongodb_dockerhub mongo -u admin -p secret`
 - run command, `show dbs` within the mongo shell to see a list of databases
 - type `exit` to quit the shell after you confirm it is working
+````

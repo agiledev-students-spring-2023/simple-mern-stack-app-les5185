@@ -1,32 +1,55 @@
 import image from './image.jpg'
 import React from 'react'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
 import './AboutUs.css'
 
 const AboutUs = props => {
+  const [images, setImages] = useState([])
+  const [text, setText] = useState([])
+  const [error, setError] = useState([])
+  const [loaded, setLoaded] = useState(false)
+
+  const fetchInfo = () => {
+    axios
+      .get(`${process.env.REACT_APP_SERVER_HOSTNAME}/aboutUs`)
+      .then(response => {
+        const content = response.data.text
+        const image = response.data.img
+        console.log(image)
+        setText(content)
+        setImages(image)
+      })
+      .catch(err => {
+        setError(err)
+      })
+      .finally(() => {
+        setLoaded(true)
+      })
+  }
+
+  useEffect(() => {
+    fetchInfo()
+
+    const intervalHandel = setInterval(() => {
+      fetchInfo()
+    }, 5000)
+
+    return e => {
+      clearInterval(intervalHandel)
+    }
+  }, [])
   return (
-    <div className="about">
-      <h1>About Us</h1>
-      <img
-        src={image}
-        style={{
-          width: '25%',
-          display: 'inline-block',
-          verticalAlign: 'top',
-        }}
-      />
-      <p style={{ width: '50%', display: 'inline-block', marginTop: '16px' }}>
-        <h3>
-          Hi! My name is Tiffany. I am a senior studying computer science.{' '}
-          <br />
-          <br /> I am from Korea. I am interested in entrepreneurship and
-          software development. As an aspiring entrepreneur, I wish to help
-          people form healthy values in their lives and stay positive and
-          motivated. <br />
-          <br /> On my free time, I like to cook, go on a run, and binge-watch
-          Netflix shows. Recently, I've been spending days watching Cyperpunk.
-        </h3>
+    <>
+      <h1> About Us</h1>
+      <img src={images} width="30%" alt="loading" />
+
+      <p className="aboutMe">
+        <br></br>
+        {text}
+        <br></br>
       </p>
-    </div>
+    </>
   )
 }
 

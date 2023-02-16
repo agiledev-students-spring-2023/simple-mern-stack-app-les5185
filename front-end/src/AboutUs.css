@@ -2,3 +2,14 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
 }
+
+/* <img
+src={image}
+style={{
+  width: '25%',
+  display: 'inline-block',
+  verticalAlign: 'top',
+}}
+/> */
+
+/* style={{ width: '50%', display: 'inline-block', marginTop: '16px' }}> */
