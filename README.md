@@ -14,7 +14,7 @@ To complete this exercise:
 
 When you have completed the exercise, leave your local copy of the app running, enter the public link to it here, and push your code changes to GitHub:
 
-````
+```
 https://90a5-207-38-141-123.ngrok.io/aboutUs
 ```
 
@@ -112,4 +112,7 @@ Initial set up of MongoDB database:
 - access the mongo shell with `docker exec -it mongodb_dockerhub mongo -u admin -p secret`
 - run command, `show dbs` within the mongo shell to see a list of databases
 - type `exit` to quit the shell after you confirm it is working
-````
+
+```
+
+```
